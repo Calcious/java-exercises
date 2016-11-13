@@ -15,6 +15,7 @@ public class HelloWorld {
         Scanner sc = new Scanner(System.in);
         int width;
         int length;
+        int depth;
         String userInput = "no";
 
 //        do {
@@ -41,9 +42,12 @@ public class HelloWorld {
             width = sc.nextInt();
             System.out.print("Enter length: ");
             length = sc.nextInt();
+            System.out.print("Enter depth: ");
+            depth = sc.nextInt();
 
             System.out.println("The room has a perimeter of " + perimeter(width, length));
             System.out.println("The room has an area of " + area(width, length));
+            System.out.println("The room has an volume of " + volume(width, length, depth));
 
             System.out.println("Thank you for using the room calculator.  Would you like to calculate another room?");
             userInput = sc.next();
@@ -57,6 +61,10 @@ public class HelloWorld {
 
     public static int area(int width, int height){
         return width * height;
+    }
+
+    public static int volume(int width, int height, int depth){
+        return width * height * depth;
     }
 }
 
