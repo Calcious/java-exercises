@@ -25,13 +25,14 @@ public class Methods {
                 break;
             System.out.println("Would you like to enter another number?");
             userContinue = sc.next();
-        } while (userContinue.equals("Yes"));
+        } while (userContinue.equalsIgnoreCase("Yes"));
     }
 
     private static long factorTran(int userInput) {
 
         for(int i = 1; i < userInput; i++){
             System.out.println(i + "*" + userInput);
+            System.out.println(i );
 
     }
      return userInput;
