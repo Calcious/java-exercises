@@ -6,6 +6,9 @@ import java.util.Scanner;
  */
 public class Exceptions {
     public static void main(String[] args) {
+        //Scanner sc = new Scanner(System.in).useDelimiter("\n")
+        //input.close(); to close any scanners and save memory
+        //studentName.trim().isEmpty()
         Scanner sc = new Scanner(System.in);
         String studentName1 = "Justin";
         int studentAge1 = 31;
