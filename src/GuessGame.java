@@ -7,7 +7,6 @@ import java.util.InputMismatchException;
  */
 public class GuessGame {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int userInput = 0;
         int randomNumber = 1 + (int)(Math.random() * ((100 - 1) + 1));
 
@@ -41,8 +40,4 @@ public class GuessGame {
         }
         return userInput;
     }
-
-//    public static void endGame(){
-//
-//    }
 }
