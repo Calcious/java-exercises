@@ -37,7 +37,7 @@ public class Exceptions {
                     userContinue.equals("yes");
                 }
             }
-        } while (userContinue.equalsIgnoreCase("yes"));
+        } while (!userContinue.equalsIgnoreCase("no"));
 
         }
 

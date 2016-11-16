@@ -19,7 +19,7 @@ public class Methods {
         do {
             System.out.println("Please enter an integer from 1 to 10");
             userInput = sc.nextInt();
-            if(userInput >= 1 && userInput <=10) {
+            if(userInput >= 1 && userInput <= 10) {
                 System.out.println(factorTran(userInput));
             } else
                 break;
