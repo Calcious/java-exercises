@@ -23,8 +23,8 @@ public class PingPong {
 
                     if(cpuTurn != userInput){
                         System.out.println("CPU misses his swing--point to the USER!");
-                        System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
                         playerScore++;
+                        System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
                     }
                     else {
                     System.out.println("CPU parries and sends that ball right back--you better act quick!");
@@ -34,6 +34,12 @@ public class PingPong {
                 System.out.println("Uh oh, you missed--point goes to the CPU!");
                 cpuScore++;
                 System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
+            }
+
+            if(cpuScore == 11){
+                System.out.println("GAME OVER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU score || " + cpuScore);
+            } else if (playerScore == 11){
+                System.out.println("CONGRATULATIONS--VICTORY FOR THE USER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU score || " + cpuScore);
             }
 
         } while (cpuScore < 11 && playerScore < 11);
