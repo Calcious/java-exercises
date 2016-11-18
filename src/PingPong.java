@@ -37,9 +37,9 @@ public class PingPong {
             }
 
             if(cpuScore == 11){
-                System.out.println("GAME OVER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU score || " + cpuScore);
+                System.out.println("*****************GAME OVER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU SCORE || " + cpuScore + "*****************");
             } else if (playerScore == 11){
-                System.out.println("CONGRATULATIONS--VICTORY FOR THE USER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU score || " + cpuScore);
+                System.out.println("*****************CONGRATULATIONS--VICTORY FOR THE USER!  YOU\'RE FINAL SCORE: " + playerScore + " || CPU SCORE || " + cpuScore + "*****************");
             }
 
         } while (cpuScore < 11 && playerScore < 11);
