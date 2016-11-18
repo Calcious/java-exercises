@@ -7,57 +7,40 @@ import java.lang.Math;
 public class PingPong {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String userInput;
+        int userInput;
         int cpuScore = 0;
         int playerScore = 0;
 
+        do {
+            System.out.println("Would you like to swing left or swing right? || Press '1' for right or '2' for left");
+            userInput = sc.nextInt();
 
-        System.out.println("Would you like to swing left or swing right?");
-        userInput = sc.next();
+            int ballDir = ballDirection(1 + (int)(Math.random() * ((2 - 1) + 1)));
 
+            if (ballDirection(ballDir) == userInput) {
+                System.out.println("Great--you hit the ball back like a champion!  CPU swings!");
+                int cpuTurn = ballDirection(ballDir);
 
-        //ballDirection()--should determine which side of the table the ball is going to using a random generator
+                    if(cpuTurn != userInput){
+                        System.out.println("CPU misses his swing--point to the USER!");
+                        System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
+                        playerScore++;
+                    }
+                    else {
+                    System.out.println("CPU parries and sends that ball right back--you better act quick!");
+                }
 
-        ballDirection(ballDir);
+            } else {
+                System.out.println("Uh oh, you missed--point goes to the CPU!");
+                cpuScore++;
+                System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
+            }
 
-        //if ballDirection() == swingDirection, then cpuTurn(), else cpuScore +1
-
-
-        if (ballDirection(ballDir).equalsIgnoreCase(userInput)) {
-
-            System.out.println("Great!  CPU swings!");
-        } else{
-            System.out.println("Uh oh, you missed--point goes to the CPU!");
-            cpuScore++;
-            System.out.println("You\'re score || " + playerScore + " || CPU score || " + cpuScore);
-        }
-
-        //write a function that determines which direction the computer will swing compDirection();
-
-
-
-
-        //the same dynamic for scoring applies to the computer
-
-
-        //First player to 7 points wins!
-
-
-
-
+        } while (cpuScore < 11 && playerScore < 11);
 
     }
-
-    public static String ballDirection(String ballDir){
-        String ballDir;
-        int randomDirection = 1 + (int)(Math.random() * ((10 - 1) + 1));
-
-        if (randomDirection % 2 == 0) {
-            ballDir.equalsIgnoreCase("right");
-        } else {
-            ballDir.equalsIgnoreCase("left");
-        }
-
+    public static int ballDirection(int ballDir){
+        ballDir = 1 + (int)(Math.random() * ((2 - 1) + 1));
         return ballDir;
     }
 }
