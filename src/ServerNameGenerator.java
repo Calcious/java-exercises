@@ -1,7 +1,7 @@
 /**
  * Created by Calcious on 11/21/16.
  */
-public class ArrayExercise {
+public class ServerNameGenerator {
     public static void main(String[] args) {
         String[] arrayOfAdjectives = {
                 "Bouncy", "Ambitious", "Persnickety", "Lugubrious","Vehement",
