@@ -4,6 +4,8 @@ import java.lang.Math;
 /**
  * Created by Calcious on 11/16/16.
  */
+//TO DO: Add robustness via try/catch
+
 public class PingPong {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
