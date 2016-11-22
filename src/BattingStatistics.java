@@ -12,12 +12,10 @@ public class BattingStatistics {
         String playerName;
         String userContinue = "no";
         String userInputPlayer;
-        int atBats = 0;
-        int basesAch = 0;
-        int atbatsWithOne = 0;
+        double atBats;
+        double basesAch = 0;
+        double atbatsWithOne = 0;
 //        String[] arrayOfPlayers= {};
-
-
 
         do {
 
@@ -39,21 +37,18 @@ public class BattingStatistics {
 
                 if(userInputBasesEarned >= 1){
                     atbatsWithOne++;
-                    System.out.println("# of at bats with one or more-- " +  atbatsWithOne);
                 }
 
                 System.out.println("During at-bat #" + (i + 1) + ", " + playerName + " earned " + userInputBasesEarned);
                 userInputAtBat--;
                 basesAch += userInputBasesEarned;
             }
-            System.out.println("Total # of atBats--" + atBats);
 
             double sluggingPercentage = basesAch / atBats;
             double battingAverage = atbatsWithOne / atBats;
-            System.out.println("Number of at bats with one or more runs ||" + atbatsWithOne);
+
             System.out.println("Slugging percentage for " + playerName + "||" + sluggingPercentage);
             System.out.println("Batting average for " + playerName + "||" + battingAverage);
-
 
 
             System.out.println("Would you like the stats of another player?");
@@ -61,10 +56,4 @@ public class BattingStatistics {
         } while (userContinue.equalsIgnoreCase("Yes"));
 
     }
-
-
-
-
-
-
     }
