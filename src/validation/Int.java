@@ -3,10 +3,13 @@ package validation;
 /**
  * Created by Moravia on 12/2/16.
  */
-public class NonEmptyString implements Validation{
+public class Int implements Validation {
+
     @Override
     public boolean isValid(Object instance) {
-        if (instance instanceof String) {
+        // determine if instance is an int
+        // return true if it is
+        if (instance instanceof Integer) {
             return true;
         } else {
             return false;
@@ -15,6 +18,6 @@ public class NonEmptyString implements Validation{
 
     @Override
     public String errorMessage() {
-            return "You must enter a string.";
+        return "You must enter an integer.";
     }
 }

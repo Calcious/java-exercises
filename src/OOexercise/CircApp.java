@@ -8,7 +8,6 @@ public class CircApp {
     public static void main(String[] args) {
         Scanner input  = new Scanner(System.in);
 
-
         //Static means we can call methods without creating an object
 
         double radius = 0;

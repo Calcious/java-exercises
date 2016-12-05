@@ -3,10 +3,10 @@ package validation;
 /**
  * Created by Moravia on 12/2/16.
  */
-public class NonEmptyString implements Validation{
+public class Double implements Validation{
     @Override
     public boolean isValid(Object instance) {
-        if (instance instanceof String) {
+        if (instance instanceof Double) {
             return true;
         } else {
             return false;
@@ -15,6 +15,6 @@ public class NonEmptyString implements Validation{
 
     @Override
     public String errorMessage() {
-            return "You must enter a string.";
+        return "Please enter a valid value (double).";
     }
 }

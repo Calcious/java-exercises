@@ -1,4 +1,4 @@
-package validation;
+//package validation;
 //
 //
 ///**
@@ -13,9 +13,13 @@ package validation;
 //    public boolean isValid(Object value) {
 //        if (!(value instanceof Integer)) {
 //            return false;
+//        } else if(min < (int) value && (int) value < max) {
+//            return true;
 //        }
-//        return min < (int) value && (int) value < max;
+//        return false;
 //    }
 //    @Override
-//    publc String
+//    public String errorMessage() {
+//        return "You must enter an integer within the appropriate range.";
+//    }
 //}
